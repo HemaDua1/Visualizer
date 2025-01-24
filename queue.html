@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoViz - Queue Visualizer</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/queue.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="particle-background"></div>
+    
+    <nav class="glassmorphism">
+        <div class="logo">
+            <a href="index.html">
+                <span class="neon-text">Algo</span><span class="neon-text-alt">Viz</span>
+            </a>
+        </div>
+        <div class="page-title">Queue Visualizer</div>
+    </nav>
+
+    <main class="visualizer-container">
+        <div class="controls glassmorphism">
+            <div class="operation-panel">
+                <input type="number" id="inputValue" placeholder="Enter value" class="input-field">
+                <div class="operation-buttons">
+                    <button id="enqueueButton" class="operation-btn">
+                        <i class="fas fa-arrow-right"></i> Enqueue
+                    </button>
+                    <button id="dequeueButton" class="operation-btn">
+                        <i class="fas fa-arrow-left"></i> Dequeue
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="visualization-area glassmorphism">
+            <div id="queueVisual" class="queue-visualization">
+                <!-- Queue items will be added here dynamically -->
+            </div>
+        </div>
+
+        <div class="info-panel glassmorphism">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="explanation">Explanation</button>
+                <button class="tab-btn" data-tab="code">Code</button>
+                <button class="tab-btn" data-tab="complexity">Complexity</button>
+            </div>
+            <div class="tab-content">
+                <div id="explanation" class="tab-pane active">
+                    <h3>Queue Data Structure</h3>
+                    <p>A queue is a First-In-First-Out (FIFO) data structure. Elements are added to the back and removed from the front.</p>
+                    <ul>
+                        <li>Enqueue: Adds an element to the back</li>
+                        <li>Dequeue: Removes an element from the front</li>
+                        <li>Front: Views the first element without removing it</li>
+                    </ul>
+                </div>
+                <div id="code" class="tab-pane">
+                    <pre><code>// Enqueue operation
+queue.push(element);
+
+// Dequeue operation
+const element = queue.shift();
+
+// Front operation
+const firstElement = queue[0];</code></pre>
+                </div>
+                <div id="complexity" class="tab-pane">
+                    <div class="complexity-item">
+                        <span>Time Complexity:</span>
+                        <span>O(1) for enqueue, O(n) for dequeue</span>
+                    </div>
+                    <div class="complexity-item">
+                        <span>Space Complexity:</span>
+                        <span>O(n) where n is queue size</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../static/js/queue.js"></script>
+</body>
+</html>

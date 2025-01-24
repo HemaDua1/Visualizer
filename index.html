@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoViz - Interactive Algorithm Visualizer</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="particle-background"></div>
+    
+    <nav class="glassmorphism">
+        <div class="logo">
+            <span class="neon-text">Algo</span><span class="neon-text-alt">Viz</span>
+        </div>
+        <div class="nav-links">
+            <a href="linked.html" class="nav-item">
+                <i class="fas fa-link"></i>
+                <span>Linked List</span>
+            </a>
+            <a href="stack.html" class="nav-item">
+                <i class="fas fa-cogs "></i>
+                <span>Stack</span>
+            </a>
+            <a href="queue.html" class="nav-item">
+                <i class="fas fa-tasks"></i>
+                <span>Queue</span>
+            </a>
+            <a href="binaryt.html" class="nav-item">
+                <i class="fas fa-sitemap"></i>
+                <span>Binary Tree</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <div class="hero-content glassmorphism">
+            <span class="neon-text">Welcome to AlgoViz!!</span>
+             <br>
+            <span class="neon-text-alt">Bringing Algorithms to Life, One Animation at a Time!</span>
+            <div class="cards-container">
+                <div class="card" data-algo="linkedlist">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-link"></i>
+                            <h3>Linked Lists</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Visualize node connections and operations</p>
+                            <a href="linked.html" class="btn-explore">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-algo="stack">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-cogs"></i>
+                            <h3>Stack</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Let's learn LIFO(Last In First Out)</p>
+                            <a href="stack.html" class="btn-explore">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-algo="queue">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-tasks"></i>
+                            <h3>Queue</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Let's learn FIFO(First In First Out)</p>
+                            <a href="queue.html" class="btn-explore">Explore</a>
+                        </div>
+                    </div>
+                    <div class="card" data-algo="binaryt">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <i class="fas fa-sitemap"></i>
+                                <h3>Binary Tree</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>Let's learn Binary Tree</p>
+                                <a href="binaryt.html" class="btn-explore">Explore</a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../static/js/particles.js"></script>
+    <script src="../static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoViz - Binary Tree Visualizer</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/binaryt.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="particle-background"></div>
+    
+    <nav class="glassmorphism">
+        <div class="logo">
+            <a href="index.html">
+                <span class="neon-text">Algo</span><span class="neon-text-alt">Viz</span>
+            </a>
+        </div>
+        <div class="page-title">Binary Tree Visualizer</div>
+    </nav>
+
+    <main class="visualizer-container">
+        <div class="controls glassmorphism">
+            <div class="operation-panel">
+                <input type="number" id="inputValue" placeholder="Enter value" class="input-field">
+                <div class="operation-buttons">
+                    <button id="insertButton" class="operation-btn">
+                        <i class="fas fa-plus"></i> Insert
+                    </button>
+                    <button id="deleteButton" class="operation-btn">
+                        <i class="fas fa-minus"></i> Delete
+                    </button>
+                </div>
+                <div class="traversal-buttons">
+                    <button id="inorderButton" class="operation-btn">Inorder</button>
+                    <button id="preorderButton" class="operation-btn">Preorder</button>
+                    <button id="postorderButton" class="operation-btn">Postorder</button>
+                </div>
+                <div class="mode-switch">
+                    <label class="switch">
+                        <input type="checkbox" id="treeMode">
+                        <span class="slider"></span>
+                    </label>
+                    <span>BST Mode</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="visualization-area glassmorphism">
+            <div id="treeVisual" class="tree-visualization">
+                <!-- Tree nodes will be added here dynamically -->
+            </div>
+        </div>
+
+        <div class="info-panel glassmorphism">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="explanation">Explanation</button>
+                <button class="tab-btn" data-tab="code">Code</button>
+                <button class="tab-btn" data-tab="complexity">Complexity</button>
+            </div>
+            <div class="tab-content">
+                <div id="explanation" class="tab-pane active">
+                    <h3>Binary Tree & BST</h3>
+                    <p>A binary tree is a tree data structure where each node has at most two children. A Binary Search Tree (BST) maintains ordered data where left subtree contains smaller values and right subtree contains larger values.</p>
+                    <ul>
+                        <li>Insert: Adds a new node</li>
+                        <li>Delete: Removes a node</li>
+                        <li>Traversals: Different ways to visit all nodes</li>
+                    </ul>
+                </div>
+                <div id="code" class="tab-pane">
+                    <pre><code>// Binary Tree Node
+class Node {
+    constructor(value) {
+        this.value = value;
+        this.left = null;
+        this.right = null;
+    }
+}</code></pre>
+                </div>
+                <div id="complexity" class="tab-pane">
+                    <div class="complexity-item">
+                        <span>Time Complexity (BST):</span>
+                        <span>O(h) for insert/delete/search</span>
+                    </div>
+                    <div class="complexity-item">
+                        <span>Space Complexity:</span>
+                        <span>O(n) where n is number of nodes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../static/js/binaryt.js"></script>
+</body>
+</html>

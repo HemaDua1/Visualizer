@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoViz - Stack Visualizer</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/stack.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="particle-background"></div>
+    
+    <nav class="glassmorphism">
+        <div class="logo">
+            <a href="index.html">
+                <span class="neon-text">Algo</span><span class="neon-text-alt">Viz</span>
+            </a>
+        </div>
+        <div class="page-title">Stack Visualizer</div>
+    </nav>
+
+    <main class="visualizer-container">
+        <div class="controls glassmorphism">
+            <div class="operation-panel">
+                <input type="number" id="inputValue" placeholder="Enter value" class="input-field">
+                <div class="operation-buttons">
+                    <button id="pushButton" class="operation-btn">
+                        <i class="fas fa-arrow-up"></i> Push
+                    </button>
+                    <button id="popButton" class="operation-btn">
+                        <i class="fas fa-arrow-down"></i> Pop
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="visualization-area glassmorphism">
+            <div id="stackVisual" class="stack-visualization">
+                <!-- Stack items will be added here dynamically -->
+            </div>
+        </div>
+
+        <div class="info-panel glassmorphism">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="explanation">Explanation</button>
+                <button class="tab-btn" data-tab="code">Code</button>
+                <button class="tab-btn" data-tab="complexity">Complexity</button>
+            </div>
+            <div class="tab-content">
+                <div id="explanation" class="tab-pane active">
+                    <h3>Stack Data Structure</h3>
+                    <p>A stack is a Last-In-First-Out (LIFO) data structure. Elements are always added to and removed from the top of the stack.</p>
+                    <ul>
+                        <li>Push: Adds an element to the top</li>
+                        <li>Pop: Removes the top element</li>
+                        <li>Peek: Views the top element without removing it</li>
+                    </ul>
+                </div>
+                <div id="code" class="tab-pane">
+                    <pre><code>// Push operation
+stack.push(element);
+
+// Pop operation
+const element = stack.pop();
+
+// Peek operation
+const topElement = stack[stack.length - 1];</code></pre>
+                </div>
+                <div id="complexity" class="tab-pane">
+                    <div class="complexity-item">
+                        <span>Time Complexity:</span>
+                        <span>O(1) for push and pop</span>
+                    </div>
+                    <div class="complexity-item">
+                        <span>Space Complexity:</span>
+                        <span>O(n) where n is stack size</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../static/js/stack.js"></script>
+</body>
+</html>
+
+

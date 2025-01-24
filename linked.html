@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoViz - Linked List Visualizer</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/linkedlist.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="particle-background"></div>
+    
+    <nav class="glassmorphism">
+        <div class="logo">
+            <a href="index.html">
+                <span class="neon-text">Algo</span><span class="neon-text-alt">Viz</span>
+            </a>
+        </div>
+        <div class="page-title">Linked List Visualizer</div>
+    </nav>
+
+    <main class="visualizer-container">
+        <div class="controls glassmorphism">
+            <div class="operation-panel">
+                <input type="number" id="nodeValue" placeholder="Enter value" class="input-field">
+                <input type="number" id="nodePosition" placeholder="Position (optional)" class="input-field">
+                
+                <div class="operation-buttons">
+                    <button class="operation-btn" data-operation="insertHead">
+                        <i class="fas fa-arrow-right"></i> Insert at Head
+                    </button>
+                    <button class="operation-btn" data-operation="insertTail">
+                        <i class="fas fa-arrow-left"></i> Insert at Tail
+                    </button>
+                    <button class="operation-btn" data-operation="insertAt">
+                        <i class="fas fa-arrow-down"></i> Insert at Position
+                    </button>
+                    <button class="operation-btn delete" data-operation="delete">
+                        <i class="fas fa-trash"></i> Delete Node
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="visualization-area glassmorphism">
+            <div id="linkedlist-container" class="list-visualization">
+                <!-- Nodes will be added here dynamically -->
+            </div>
+        </div>
+
+        <div class="info-panel glassmorphism">
+            <h3>List Information</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Length:</span>
+                    <span id="listLength" class="info-value">0</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Head Value:</span>
+                    <span id="headValue" class="info-value">null</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Tail Value:</span>
+                    <span id="tailValue" class="info-value">null</span>
+                </div>
+            </div>
+        </div>
+    </main>
+  <script src="../static/js/linked.js"></script>
+</body>
+</html>
